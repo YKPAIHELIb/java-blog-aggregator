@@ -4,11 +4,6 @@
 <%@ include file="../layout/taglib.jsp"%>
 
 <style>
-body {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background-color: #eee;
-}
 
 .form-signin {
 	max-width: 330px;
@@ -51,18 +46,9 @@ body {
 }
 </style>
 
-<form class="form-signin" action="j_spring_security_check" method="POST">
+<form class="form-signin" role="form" action="j_spring_security_check" method="POST">
 	<h2 class="form-signin-heading">Please sign in</h2>
-	<input type="name" id="inputEmail" class="form-control"
-		placeholder="Email address" required autofocus> 
-		<input
-		type="password" id="inputPassword" class="form-control"
-		placeholder="Password" required>
-	<div class="checkbox">
-		<label> <input type="checkbox" value="remember-me">
-			Remember me
-		</label>
-	</div>
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-		in</button>
+	<input type="text" name="j_username" class="form-control" placeholder="Name" required autofocus> 
+	<input type="password" name="j_password" class="form-control" placeholder="Password" required>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 </form>

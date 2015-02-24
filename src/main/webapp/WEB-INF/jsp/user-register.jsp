@@ -28,5 +28,3 @@
 		</div>
 	</div>
 </form:form>
-
-TOTO ADD FORM
