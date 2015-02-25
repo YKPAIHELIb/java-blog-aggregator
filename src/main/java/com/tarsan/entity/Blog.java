@@ -2,6 +2,7 @@ package com.tarsan.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,13 +20,13 @@ public class Blog {
 	private String url;
 
 	private String name;
-	
+
 	@ManyToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name = "user_id")
 	private User user;
-	
-	@OneToMany(mappedBy="blog")
-	private List<Item> items; 
+
+	@OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE)
+	private List<Item> items;
 
 	public User getUser() {
 		return user;

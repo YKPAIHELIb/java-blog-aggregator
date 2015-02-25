@@ -15,7 +15,7 @@
 	</context:component-scan>
 
 	<jdbc:embedded-database type="HSQL" id="dataSource" />
-	
+
 	<bean
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		id="entityManagerFactory">
